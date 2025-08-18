@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BuBo Beach Club - Experiencia Única en la Costa del Sol</title>
+  <meta name="description" content="Descubre BuBo Beach Club: restaurante gourmet, piscina exclusiva y eventos únicos frente al mar. Reserva tu experiencia perfecta en la Costa del Sol.">
+  <meta name="keywords" content="beach club, restaurante, piscina, eventos, Costa del Sol, reservas">
+  <meta name="theme-color" content="#0ea5e9">
+  <link rel="canonical" href="https://bubobeachclub.com">
+  <meta property="og:title" content="BuBo Beach Club - Experiencia Única">
+  <meta property="og:description" content="Restaurante gourmet, piscina exclusiva y eventos únicos frente al mar">
+  <meta property="og:image" content="https://res.cloudinary.com/ddjl4shzl/image/upload/v1755559379/ChatGPT_Image_Aug_17_2025_12_26_50_AM_yah34b.png">
+  <meta property="og:url" content="https://bubobeachclub.com">
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOC4wMDAwMTI4LjAwMDAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxjaXJjbGUgY3g9IjY0IiBjeT0iNjQiIHI9IjUwIiBmaWxsPSIjMGVhNWU5Ii8+PC9zdmc+">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      /* Beach Club Color Palette */
+      --ocean-blue: #0ea5e9;
+      --deep-blue: #0284c7;
+      --turquoise: #06b6d4;
+      --coral: #f97316;
+      --sand: #fbbf24;
+      --pearl: #f8fafc;
+      --seafoam: #10b981;
+      --sunset: #f59e0b;
+      
+      /* Light theme */
+      --bg-primary: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #10b981 100%);
+      --bg-secondary: linear-gradient(45deg, #f8fafc, #e2e8f0);
+      --bg-card: rgba(248, 250, 252, 0.95);
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --text-light: #ffffff;
+      --border-color: rgba(226, 232, 240, 0.8);
+      --border-focus: #0ea5e9;
+      --shadow-color: rgba(15, 23, 42, 0.1);
+      --accent-gradient: linear-gradient(135deg, #0ea5e9, #06b6d4);
+      --coral-gradient: linear-gradient(135deg, #f97316, #f59e0b);
+      --success-color: #10b981;
+      --error-color: #ef4444;
+    }
+
+    /* Dark theme variables */
+    .dark-theme {
+      --bg-primary: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%) !important;
+      --bg-secondary: linear-gradient(45deg, #1e293b, #334155) !important;
+      --bg-card: rgba(30, 41, 59, 0.95) !important;
+      --text-primary: #f8fafc !important;
+      --text-secondary: #cbd5e1 !important;
+      --text-muted: #94a3b8 !important;
+      --border-color: rgba(71, 85, 105, 0.8) !important;
+      --shadow-color: rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* Dark theme background overlay */
+    .dark-theme::before {
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(30, 41, 59, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(51, 65, 85, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(15, 23, 42, 0.3) 0%, transparent 50%) !important;
+    }
+
+    /* Light theme (default) */
+    .light-theme {
+      --bg-primary: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #10b981 100%) !important;
+      --bg-secondary: linear-gradient(45deg, #f8fafc, #e2e8f0) !important;
+      --bg-card: rgba(248, 250, 252, 0.95) !important;
+      --text-primary: #0f172a !important;
+      --text-secondary: #475569 !important;
+      --text-muted: #64748b !important;
+      --border-color: rgba(226, 232, 240, 0.8) !important;
+      --shadow-color: rgba(15, 23, 42, 0.1) !important;
+    }
+
+    /* Light theme background overlay */
+    .light-theme::before {
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(6, 182, 212, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(14, 165, 233, 0.2) 0%, transparent 50%) !important;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(2.5rem); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-2.5rem); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(2.5rem); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      33% { transform: translateY(-0.5rem) rotate(1deg); }
+      66% { transform: translateY(0.25rem) rotate(-1deg); }
+      100% { transform: translateY(0) rotate(0deg); }
+    }
+    
+    @keyframes oceanWave {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes scaleIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    body {
+      background: var(--bg-primary);
+      background-attachment: fixed;
+      background-size: 400% 400%;
+      animation: oceanWave 12s ease-in-out infinite;
+      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      transition: all 0.3s ease;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(6, 182, 212, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(14, 165, 233, 0.2) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .ocean-bg {
+      background: var(--bg-primary);
+      background-size: 400% 400%;
+      animation: oceanWave 15s ease-in-out infinite;
+      position: relative;
+    }
+
+    .card {
+      background: var(--bg-card);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border-color);
+      box-shadow: 
+        0 20px 40px var(--shadow-color),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: left 0.6s;
+    }
+
+    .card:hover::before {
+      left: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 
+        0 30px 60px var(--shadow-color),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: var(--text-light);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      border: none;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.6s;
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .btn-primary:hover {
+      background: var(--coral-gradient);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 
+        0 15px 35px rgba(14, 165, 233, 0.4),
+        0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-light);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+      opacity: 0;
+    }
+
+    .fade-in-left {
+      animation: fadeInLeft 0.8s ease-out forwards;
+      opacity: 0;
+    }
+
+    .fade-in-right {
+      animation: fadeInRight 0.8s ease-out forwards;
+      opacity: 0;
+    }
+
+    .scale-in {
+      animation: scaleIn 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    .theme-toggle {
+      background: var(--bg-secondary);
+      border: 2px solid var(--border-color);
+      color: var(--text-primary);
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background: var(--border-color);
+      transform: scale(1.05);
+    }
+
+    /* Navigation */
+    .nav-link {
+      color: rgba(255, 255, 255, 0.9);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--coral);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: white;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Scroll animations */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .scroll-animate.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-secondary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--ocean-blue);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--deep-blue);
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 768px) {
+      body {
+        background-size: 300% 300%;
+        animation: oceanWave 8s ease-in-out infinite;
+      }
+
+      .card::before {
+        display: none;
+      }
+
+      .btn-primary::before {
+        display: none;
+      }
+
+      .floating {
+        animation-duration: 2s;
+      }
+    }
+
+    /* Reduced motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      body::before {
+        animation: none;
+      }
+
+      body {
+        animation: none;
+      }
+
+      .floating {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body class="ocean-bg">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-white/10 border-b border-white/20">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <img 
+            src="https://res.cloudinary.com/ddjl4shzl/image/upload/v1755559379/ChatGPT_Image_Aug_17_2025_12_26_50_AM_yah34b.png" 
+            alt="BuBo Beach Club" 
+            class="w-10 h-10 rounded-lg shadow-md"
+          >
+          <span class="text-white font-bold text-xl" data-translate="nav_title">BuBo Beach</span>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#inicio" class="nav-link" data-translate="nav_home">Inicio</a>
+          <a href="#experiencias" class="nav-link" data-translate="nav_experiences">Experiencias</a>
+          <a href="#eventos" class="nav-link" data-translate="nav_events">Eventos</a>
+          <a href="#contacto" class="nav-link" data-translate="nav_contact">Contacto</a>
+          <a href="#reservar" class="btn-primary px-6 py-2 rounded-full font-semibold" data-translate="nav_reserve">Reservar</a>
+        </div>
+
+        <!-- Controls -->
+        <div class="flex items-center space-x-3">
+          <!-- Language Selector -->
+          <div class="relative">
+            <button id="languageToggle" class="theme-toggle p-2 rounded-full shadow-lg backdrop-filter backdrop-blur-lg flex items-center space-x-1" aria-label="Cambiar idioma">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+              </svg>
+              <span id="currentLang" class="text-xs font-medium">ES</span>
+            </button>
+            <div id="languageMenu" class="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 py-2 min-w-[120px] hidden">
+              <button class="lang-option w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center space-x-2" data-lang="es">
+                <span class="text-lg">🇪🇸</span>
+                <span class="text-sm">Español</span>
+              </button>
+              <button class="lang-option w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center space-x-2" data-lang="en">
+                <span class="text-lg">🇬🇧</span>
+                <span class="text-sm">English</span>
+              </button>
+              <button class="lang-option w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center space-x-2" data-lang="fr">
+                <span class="text-lg">🇫🇷</span>
+                <span class="text-sm">Français</span>
+              </button>
+              <button class="lang-option w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center space-x-2" data-lang="de">
+                <span class="text-lg">🇩🇪</span>
+                <span class="text-sm">Deutsch</span>
+              </button>
+              <button class="lang-option w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center space-x-2" data-lang="it">
+                <span class="text-lg">🇮🇹</span>
+                <span class="text-sm">Italiano</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Theme Toggle -->
+          <button id="themeToggle" class="theme-toggle p-2 rounded-full shadow-lg backdrop-filter backdrop-blur-lg" aria-label="Cambiar tema">
+            <svg id="sunIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+            <svg id="moonIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" class="md:hidden theme-toggle p-2 rounded-full">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden hidden mt-4 pb-4 border-t border-white/20">
+        <div class="flex flex-col space-y-4 pt-4">
+          <a href="#inicio" class="nav-link" data-translate="nav_home">Inicio</a>
+          <a href="#experiencias" class="nav-link" data-translate="nav_experiences">Experiencias</a>
+          <a href="#eventos" class="nav-link" data-translate="nav_events">Eventos</a>
+          <a href="#contacto" class="nav-link" data-translate="nav_contact">Contacto</a>
+          <a href="#reservar" class="btn-primary px-6 py-3 rounded-full font-semibold text-center" data-translate="nav_reserve">Reservar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="min-h-screen flex items-center justify-center relative pt-20">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-4xl mx-auto">
+        <!-- Logo -->
+        <div class="floating mb-8 fade-in-up">
+          <img 
+            src="https://res.cloudinary.com/ddjl4shzl/image/upload/v1755559379/ChatGPT_Image_Aug_17_2025_12_26_50_AM_yah34b.png" 
+            alt="BuBo Beach Club Logo" 
+            class="max-w-[150px] h-auto mx-auto rounded-xl shadow-2xl"
+          >
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 fade-in-up" style="animation-delay: 0.2s;">
+          <span class="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" data-translate="hero_title">
+            BuBo Beach Club
+          </span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-xl md:text-2xl text-white/90 mb-8 fade-in-up" style="animation-delay: 0.4s;" data-translate="hero_subtitle">
+          Donde el lujo se encuentra con el mar
+        </p>
+
+        <!-- Description -->
+        <p class="text-lg text-white/80 mb-12 max-w-2xl mx-auto fade-in-up" style="animation-delay: 0.6s;" data-translate="hero_description">
+          Experimenta la perfecta combinación de gastronomía excepcional, relajación junto a la piscina y eventos únicos en el corazón de la Costa del Sol.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up" style="animation-delay: 0.8s;">
+          <a href="#reservar" class="btn-primary px-8 py-4 rounded-full font-bold text-lg shadow-2xl" data-translate="hero_cta_primary">
+            Reservar Mesa
+          </a>
+          <a href="#experiencias" class="btn-secondary px-8 py-4 rounded-full font-semibold text-lg" data-translate="hero_cta_secondary">
+            Descubrir Más
+          </a>
+        </div>
+
+        <!-- Features -->
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 fade-in-up" style="animation-delay: 1s;">
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h3 class="text-white font-semibold mb-2" data-translate="feature_restaurant">Restaurante Gourmet</h3>
+            <p class="text-white/70 text-sm" data-translate="feature_restaurant_desc">Cocina mediterránea de autor</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-white font-semibold mb-2" data-translate="feature_pool">Piscina Exclusiva</h3>
+            <p class="text-white/70 text-sm" data-translate="feature_pool_desc">Relájate con vistas al mar</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+              </svg>
+            </div>
+            <h3 class="text-white font-semibold mb-2" data-translate="feature_events">Eventos Únicos</h3>
+            <p class="text-white/70 text-sm" data-translate="feature_events_desc">Música en vivo y celebraciones</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiences Section -->
+  <section id="experiencias" class="py-20 relative">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 scroll-animate" data-translate="experiences_title">
+          Nuestras Experiencias
+        </h2>
+        <p class="text-xl text-white/80 max-w-2xl mx-auto scroll-animate" data-translate="experiences_subtitle">
+          Cada momento en BuBo Beach Club está diseñado para crear recuerdos inolvidables
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Restaurant Experience -->
+        <div class="card rounded-2xl p-8 scroll-animate">
+          <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-center" style="color: var(--text-primary);" data-translate="exp_restaurant_title">Restaurante</h3>
+          <p class="text-center mb-6" style="color: var(--text-secondary);" data-translate="exp_restaurant_desc">
+            Disfruta de nuestra cocina mediterránea de autor con ingredientes frescos y locales, acompañada de las mejores vistas al mar.
+          </p>
+          <div class="text-center">
+            <a href="#reservar" class="btn-primary px-6 py-3 rounded-full font-semibold" data-translate="exp_reserve">Reservar Mesa</a>
+          </div>
+        </div>
+
+        <!-- Pool Experience -->
+        <div class="card rounded-2xl p-8 scroll-animate">
+          <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-center" style="color: var(--text-primary);" data-translate="exp_pool_title">Piscina</h3>
+          <p class="text-center mb-6" style="color: var(--text-secondary);" data-translate="exp_pool_desc">
+            Relájate en nuestra piscina exclusiva con servicio de cócteles premium y las mejores vistas panorámicas de la costa.
+          </p>
+          <div class="text-center">
+            <a href="#reservar" class="btn-primary px-6 py-3 rounded-full font-semibold" data-translate="exp_reserve">Reservar Mesa</a>
+          </div>
+        </div>
+
+        <!-- Events Experience -->
+        <div class="card rounded-2xl p-8 scroll-animate">
+          <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-center" style="color: var(--text-primary);" data-translate="exp_events_title">Eventos Privados</h3>
+          <p class="text-center mb-6" style="color: var(--text-secondary);" data-translate="exp_events_desc">
+            Organiza tu evento perfecto con nuestro equipo especializado. Bodas, celebraciones corporativas y fiestas exclusivas.
+          </p>
+          <div class="text-center">
+            <a href="#reservar" class="btn-primary px-6 py-3 rounded-full font-semibold" data-translate="exp_reserve">Reservar Mesa</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="eventos" class="py-20 relative">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 scroll-animate" data-translate="events_title">
+          Próximos Eventos
+        </h2>
+        <p class="text-xl text-white/80 max-w-2xl mx-auto scroll-animate" data-translate="events_subtitle">
+          Vive experiencias musicales únicas en el ambiente más exclusivo de la costa
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Jazz Night -->
+        <div class="card rounded-2xl p-6 scroll-animate">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold" style="color: var(--text-primary);" data-translate="event_jazz_title">Noche de Jazz</h3>
+              <p class="text-sm" style="color: var(--text-muted);" data-translate="event_jazz_date">Viernes 20:00 - 00:00</p>
+            </div>
+          </div>
+          <p class="mb-4" style="color: var(--text-secondary);" data-translate="event_jazz_desc">
+            Disfruta de los mejores artistas de jazz en vivo mientras saboreas nuestros cócteles signature bajo las estrellas.
+          </p>
+          <a href="#reservar" class="btn-primary px-4 py-2 rounded-full text-sm font-semibold" data-translate="event_reserve">Reservar</a>
+        </div>
+
+        <!-- R&B Tribute -->
+        <div class="card rounded-2xl p-6 scroll-animate">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold" style="color: var(--text-primary);" data-translate="event_rnb_title">Tributo R&B 2000s</h3>
+              <p class="text-sm" style="color: var(--text-muted);" data-translate="event_rnb_date">Sábados 21:00 - 02:00</p>
+            </div>
+          </div>
+          <p class="mb-4" style="color: var(--text-secondary);" data-translate="event_rnb_desc">
+            Revive los mejores hits del R&B de los 2000s con actuaciones en vivo que te transportarán a la época dorada del género.
+          </p>
+          <a href="#reservar" class="btn-primary px-4 py-2 rounded-full text-sm font-semibold" data-translate="event_reserve">Reservar</a>
+        </div>
+
+        <!-- Hip Hop Classics -->
+        <div class="card rounded-2xl p-6 scroll-animate">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold" style="color: var(--text-primary);" data-translate="event_hiphop_title">Hip Hop Classics</h3>
+              <p class="text-sm" style="color: var(--text-muted);" data-translate="event_hiphop_date">Domingos 19:00 - 23:00</p>
+            </div>
+          </div>
+          <p class="mb-4" style="color: var(--text-secondary);" data-translate="event_hiphop_desc">
+            Los clásicos del hip hop que marcaron una generación, interpretados por los mejores DJs y artistas de la escena local.
+          </p>
+          <a href="#reservar" class="btn-primary px-4 py-2 rounded-full text-sm font-semibold" data-translate="event_reserve">Reservar</a>
+        </div>
+
+        <!-- Sunset Lounge -->
+        <div class="card rounded-2xl p-6 scroll-animate">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold" style="color: var(--text-primary);" data-translate="event_sunset_title">Sunset Lounge</h3>
+              <p class="text-sm" style="color: var(--text-muted);" data-translate="event_sunset_date">Diario 18:00 - 21:00</p>
+            </div>
+          </div>
+          <p class="mb-4" style="color: var(--text-secondary);" data-translate="event_sunset_desc">
+            Música chill-out y ambiente relajado para disfrutar de los atardeceres más espectaculares de la Costa del Sol.
+          </p>
+          <a href="#reservar" class="btn-primary px-4 py-2 rounded-full text-sm font-semibold" data-translate="event_reserve">Reservar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation Section -->
+  <section id="reservar" class="py-20 relative">
+    <div class="container mx-auto px-4">
+      <div class="max-w-md mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 scroll-animate" data-translate="reservation_title">
+            Reserva tu Mesa
+          </h2>
+          <p class="text-xl text-white/80 scroll-animate" data-translate="reservation_subtitle">
+            Asegura tu lugar en la experiencia más exclusiva de la costa
+          </p>
+        </div>
+
+        <!-- Quick Reservation Card -->
+        <div class="card rounded-3xl p-8 scroll-animate">
+          <div class="text-center mb-8">
+            <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-2" style="color: var(--text-primary);" data-translate="quick_reservation_title">Reserva Rápida</h3>
+            <p class="text-sm" style="color: var(--text-secondary);" data-translate="quick_reservation_desc">
+              Confirma tu reserva por WhatsApp en menos de 2 minutos
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <!-- Experience Selection -->
+            <div>
+              <label class="block text-sm font-semibold mb-3" style="color: var(--text-secondary);" data-translate="quick_experience_label">
+                Selecciona tu experiencia
+              </label>
+              <div class="grid grid-cols-1 gap-3">
+                <button class="experience-btn p-4 rounded-xl border-2 border-gray-200 hover:border-blue-400 transition-all text-left" data-experience="Restaurante">
+                  <div class="flex items-center">
+                    <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                      <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold" style="color: var(--text-primary);" data-translate="quick_restaurant">Restaurante</h4>
+                      <p class="text-xs" style="color: var(--text-muted);" data-translate="quick_restaurant_desc">Cocina mediterránea de autor</p>
+                    </div>
+                  </div>
+                </button>
+                <button class="experience-btn p-4 rounded-xl border-2 border-gray-200 hover:border-blue-400 transition-all text-left" data-experience="Piscina">
+                  <div class="flex items-center">
+                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                      <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold" style="color: var(--text-primary);" data-translate="quick_pool">Piscina</h4>
+                      <p class="text-xs" style="color: var(--text-muted);" data-translate="quick_pool_desc">Relax con vistas al mar</p>
+                    </div>
+                  </div>
+                </button>
+                <button class="experience-btn p-4 rounded-xl border-2 border-gray-200 hover:border-blue-400 transition-all text-left" data-experience="Evento Privado">
+                  <div class="flex items-center">
+                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                      <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold" style="color: var(--text-primary);" data-translate="quick_event">Evento Privado</h4>
+                      <p class="text-xs" style="color: var(--text-muted);" data-translate="quick_event_desc">Celebraciones exclusivas</p>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- WhatsApp Button -->
+            <button id="quickReserveBtn" class="btn-primary w-full py-4 px-6 rounded-xl font-bold text-lg shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+              <span class="flex items-center justify-center">
+                <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.109"/>
+                </svg>
+                <span data-translate="quick_reserve_whatsapp">Reservar por WhatsApp</span>
+              </span>
+            </button>
+
+            <p class="text-xs text-center" style="color: var(--text-muted);" data-translate="quick_reserve_note">
+              Te contactaremos inmediatamente para confirmar tu reserva
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contacto" class="py-20 relative">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 scroll-animate" data-translate="contact_title">
+            Contacto
+          </h2>
+          <p class="text-xl text-white/80 scroll-animate" data-translate="contact_subtitle">
+            Estamos aquí para hacer realidad tu experiencia perfecta
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Contact Info -->
+          <div class="card rounded-2xl p-8 scroll-animate">
+            <h3 class="text-2xl font-bold mb-6" style="color: var(--text-primary);" data-translate="contact_info_title">Información de Contacto</h3>
+            
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1" style="color: var(--text-primary);" data-translate="contact_address_title">Dirección</h4>
+                  <p style="color: var(--text-secondary);" data-translate="contact_address">Playa de los Sueños<br>Costa del Sol, España</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1" style="color: var(--text-primary);" data-translate="contact_phone_title">Teléfono</h4>
+                  <p style="color: var(--text-secondary);">+34 644 075 065</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1" style="color: var(--text-primary);" data-translate="contact_hours_title">Horarios</h4>
+                  <p style="color: var(--text-secondary);" data-translate="contact_hours">Lunes a Domingo<br>12:00 - 00:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="card rounded-2xl p-8 scroll-animate">
+            <h3 class="text-2xl font-bold mb-6" style="color: var(--text-primary);" data-translate="contact_actions_title">Contacto Directo</h3>
+            
+            <div class="space-y-4">
+              <a href="https://wa.me/34644075065" target="_blank" class="flex items-center p-4 rounded-xl bg-green-50 hover:bg-green-100 transition-colors border border-green-200">
+                <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                  <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.109"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-green-800" data-translate="contact_whatsapp">WhatsApp</h4>
+                  <p class="text-sm text-green-600" data-translate="contact_whatsapp_desc">Respuesta inmediata</p>
+                </div>
+              </a>
+
+              <a href="tel:+34644075065" class="flex items-center p-4 rounded-xl bg-blue-50 hover:bg-blue-100 transition-colors border border-blue-200">
+                <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-blue-800" data-translate="contact_call">Llamar Ahora</h4>
+                  <p class="text-sm text-blue-600" data-translate="contact_call_desc">Atención personalizada</p>
+                </div>
+              </a>
+
+              <button onclick="scrollToSection('reservar')" class="w-full flex items-center p-4 rounded-xl bg-orange-50 hover:bg-orange-100 transition-colors border border-orange-200">
+                <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mr-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-orange-800" data-translate="contact_reserve">Reservar Mesa</h4>
+                  <p class="text-sm text-orange-600" data-translate="contact_reserve_desc">Proceso rápido y fácil</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-white/20">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <div class="flex items-center justify-center space-x-3 mb-6">
+          <img 
+            src="https://res.cloudinary.com/ddjl4shzl/image/upload/v1755559379/ChatGPT_Image_Aug_17_2025_12_26_50_AM_yah34b.png" 
+            alt="BuBo Beach Club" 
+            class="w-12 h-12 rounded-lg shadow-md"
+          >
+          <span class="text-white font-bold text-2xl" data-translate="footer_title">BuBo Beach Club</span>
+        </div>
+        
+        <p class="text-white/80 mb-6 max-w-2xl mx-auto" data-translate="footer_description">
+          Donde cada momento se convierte en un recuerdo inolvidable. Experiencias únicas en el corazón de la Costa del Sol.
+        </p>
+        
+        <div class="flex justify-center space-x-6 mb-8">
+          <a href="https://wa.me/34644075065" target="_blank" class="text-white/70 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.109"/>
+            </svg>
+          </a>
+          <a href="tel:+34644075065" class="text-white/70 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+          </a>
+        </div>
+        
+        <p class="text-white/60 text-sm" data-translate="footer_copyright">
+          © 2024 BuBo Beach Club. Todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Multilingual Support
+    const translations = {
+      es: {
+        // Navigation
+        nav_title: 'BuBo Beach',
+        nav_home: 'Inicio',
+        nav_experiences: 'Experiencias',
+        nav_events: 'Eventos',
+        nav_contact: 'Contacto',
+        nav_reserve: 'Reservar',
+        
+        // Hero Section
+        hero_title: 'BuBo Beach Club',
+        hero_subtitle: 'Donde el lujo se encuentra con el mar',
+        hero_description: 'Experimenta la perfecta combinación de gastronomía excepcional, relajación junto a la piscina y eventos únicos en el corazón de la Costa del Sol.',
+        hero_cta_primary: 'Reservar Mesa',
+        hero_cta_secondary: 'Descubrir Más',
+        
+        // Features
+        feature_restaurant: 'Restaurante Gourmet',
+        feature_restaurant_desc: 'Cocina mediterránea de autor',
+        feature_pool: 'Piscina Exclusiva',
+        feature_pool_desc: 'Relájate con vistas al mar',
+        feature_events: 'Eventos Únicos',
+        feature_events_desc: 'Música en vivo y celebraciones',
+        
+        // Experiences
+        experiences_title: 'Nuestras Experiencias',
+        experiences_subtitle: 'Cada momento en BuBo Beach Club está diseñado para crear recuerdos inolvidables',
+        exp_restaurant_title: 'Restaurante',
+        exp_restaurant_desc: 'Disfruta de nuestra cocina mediterránea de autor con ingredientes frescos y locales, acompañada de las mejores vistas al mar.',
+        exp_pool_title: 'Piscina',
+        exp_pool_desc: 'Relájate en nuestra piscina exclusiva con servicio de cócteles premium y las mejores vistas panorámicas de la costa.',
+        exp_events_title: 'Eventos Privados',
+        exp_events_desc: 'Organiza tu evento perfecto con nuestro equipo especializado. Bodas, celebraciones corporativas y fiestas exclusivas.',
+        exp_reserve: 'Reservar Mesa',
+        
+        // Events
+        events_title: 'Próximos Eventos',
+        events_subtitle: 'Vive experiencias musicales únicas en el ambiente más exclusivo de la costa',
+        event_jazz_title: 'Noche de Jazz',
+        event_jazz_date: 'Viernes 20:00 - 00:00',
+        event_jazz_desc: 'Disfruta de los mejores artistas de jazz en vivo mientras saboreas nuestros cócteles signature bajo las estrellas.',
+        event_rnb_title: 'Tributo R&B 2000s',
+        event_rnb_date: 'Sábados 21:00 - 02:00',
+        event_rnb_desc: 'Revive los mejores hits del R&B de los 2000s con actuaciones en vivo que te transportarán a la época dorada del género.',
+        event_hiphop_title: 'Hip Hop Classics',
+        event_hiphop_date: 'Domingos 19:00 - 23:00',
+        event_hiphop_desc: 'Los clásicos del hip hop que marcaron una generación, interpretados por los mejores DJs y artistas de la escena local.',
+        event_sunset_title: 'Sunset Lounge',
+        event_sunset_date: 'Diario 18:00 - 21:00',
+        event_sunset_desc: 'Música chill-out y ambiente relajado para disfrutar de los atardeceres más espectaculares de la Costa del Sol.',
+        event_reserve: 'Reservar',
+        
+        // Reservation
+        reservation_title: 'Reserva tu Mesa',
+        reservation_subtitle: 'Asegura tu lugar en la experiencia más exclusiva de la costa',
+        quick_reservation_title: 'Reserva Rápida',
+        quick_reservation_desc: 'Confirma tu reserva por WhatsApp en menos de 2 minutos',
+        quick_experience_label: 'Selecciona tu experiencia',
+        quick_restaurant: 'Restaurante',
+        quick_restaurant_desc: 'Cocina mediterránea de autor',
+        quick_pool: 'Piscina',
+        quick_pool_desc: 'Relax con vistas al mar',
+        quick_event: 'Evento Privado',
+        quick_event_desc: 'Celebraciones exclusivas',
+        quick_reserve_whatsapp: 'Reservar por WhatsApp',
+        quick_reserve_note: 'Te contactaremos inmediatamente para confirmar tu reserva',
+        
+        // Contact
+        contact_title: 'Contacto',
+        contact_subtitle: 'Estamos aquí para hacer realidad tu experiencia perfecta',
+        contact_info_title: 'Información de Contacto',
+        contact_address_title: 'Dirección',
+        contact_address: 'Playa de los Sueños<br>Costa del Sol, España',
+        contact_phone_title: 'Teléfono',
+        contact_hours_title: 'Horarios',
+        contact_hours: 'Lunes a Domingo<br>12:00 - 00:00',
+        contact_actions_title: 'Contacto Directo',
+        contact_whatsapp: 'WhatsApp',
+        contact_whatsapp_desc: 'Respuesta inmediata',
+        contact_call: 'Llamar Ahora',
+        contact_call_desc: 'Atención personalizada',
+        contact_reserve: 'Reservar Mesa',
+        contact_reserve_desc: 'Proceso rápido y fácil',
+        
+        // Footer
+        footer_title: 'BuBo Beach Club',
+        footer_description: 'Donde cada momento se convierte en un recuerdo inolvidable. Experiencias únicas en el corazón de la Costa del Sol.',
+        footer_copyright: '© 2024 BuBo Beach Club. Todos los derechos reservados.'
+      },
+      en: {
+        // Navigation
+        nav_title: 'BuBo Beach',
+        nav_home: 'Home',
+        nav_experiences: 'Experiences',
+        nav_events: 'Events',
+        nav_contact: 'Contact',
+        nav_reserve: 'Reserve',
+        
+        // Hero Section
+        hero_title: 'BuBo Beach Club',
+        hero_subtitle: 'Where luxury meets the sea',
+        hero_description: 'Experience the perfect combination of exceptional gastronomy, poolside relaxation and unique events in the heart of Costa del Sol.',
+        hero_cta_primary: 'Reserve Table',
+        hero_cta_secondary: 'Discover More',
+        
+        // Features
+        feature_restaurant: 'Gourmet Restaurant',
+        feature_restaurant_desc: 'Mediterranean signature cuisine',
+        feature_pool: 'Exclusive Pool',
+        feature_pool_desc: 'Relax with sea views',
+        feature_events: 'Unique Events',
+        feature_events_desc: 'Live music and celebrations',
+        
+        // Experiences
+        experiences_title: 'Our Experiences',
+        experiences_subtitle: 'Every moment at BuBo Beach Club is designed to create unforgettable memories',
+        exp_restaurant_title: 'Restaurant',
+        exp_restaurant_desc: 'Enjoy our Mediterranean signature cuisine with fresh, local ingredients, accompanied by the best sea views.',
+        exp_pool_title: 'Pool',
+        exp_pool_desc: 'Relax in our exclusive pool with premium cocktail service and the best panoramic views of the coast.',
+        exp_events_title: 'Private Events',
+        exp_events_desc: 'Organize your perfect event with our specialized team. Weddings, corporate celebrations and exclusive parties.',
+        exp_reserve: 'Reserve Table',
+        
+        // Events
+        events_title: 'Upcoming Events',
+        events_subtitle: 'Live unique musical experiences in the most exclusive atmosphere on the coast',
+        event_jazz_title: 'Jazz Night',
+        event_jazz_date: 'Fridays 8:00 PM - 12:00 AM',
+        event_jazz_desc: 'Enjoy the best live jazz artists while savoring our signature cocktails under the stars.',
+        event_rnb_title: 'R&B 2000s Tribute',
+        event_rnb_date: 'Saturdays 9:00 PM - 2:00 AM',
+        event_rnb_desc: 'Relive the best R&B hits from the 2000s with live performances that will transport you to the golden age of the genre.',
+        event_hiphop_title: 'Hip Hop Classics',
+        event_hiphop_date: 'Sundays 7:00 PM - 11:00 PM',
+        event_hiphop_desc: 'The hip hop classics that marked a generation, performed by the best DJs and artists from the local scene.',
+        event_sunset_title: 'Sunset Lounge',
+        event_sunset_date: 'Daily 6:00 PM - 9:00 PM',
+        event_sunset_desc: 'Chill-out music and relaxed atmosphere to enjoy the most spectacular sunsets on the Costa del Sol.',
+        event_reserve: 'Reserve',
+        
+        // Reservation
+        reservation_title: 'Reserve Your Table',
+        reservation_subtitle: 'Secure your place in the most exclusive experience on the coast',
+        quick_reservation_title: 'Quick Reservation',
+        quick_reservation_desc: 'Confirm your reservation via WhatsApp in less than 2 minutes',
+        quick_experience_label: 'Select your experience',
+        quick_restaurant: 'Restaurant',
+        quick_restaurant_desc: 'Mediterranean signature cuisine',
+        quick_pool: 'Pool',
+        quick_pool_desc: 'Relax with sea views',
+        quick_event: 'Private Event',
+        quick_event_desc: 'Exclusive celebrations',
+        quick_reserve_whatsapp: 'Reserve via WhatsApp',
+        quick_reserve_note: 'We will contact you immediately to confirm your reservation',
+        
+        // Contact
+        contact_title: 'Contact',
+        contact_subtitle: 'We are here to make your perfect experience come true',
+        contact_info_title: 'Contact Information',
+        contact_address_title: 'Address',
+        contact_address: 'Dream Beach<br>Costa del Sol, Spain',
+        contact_phone_title: 'Phone',
+        contact_hours_title: 'Hours',
+        contact_hours: 'Monday to Sunday<br>12:00 PM - 12:00 AM',
+        contact_actions_title: 'Direct Contact',
+        contact_whatsapp: 'WhatsApp',
+        contact_whatsapp_desc: 'Immediate response',
+        contact_call: 'Call Now',
+        contact_call_desc: 'Personalized attention',
+        contact_reserve: 'Reserve Table',
+        contact_reserve_desc: 'Quick and easy process',
+        
+        // Footer
+        footer_title: 'BuBo Beach Club',
+        footer_description: 'Where every moment becomes an unforgettable memory. Unique experiences in the heart of Costa del Sol.',
+        footer_copyright: '© 2024 BuBo Beach Club. All rights reserved.'
+      },
+      fr: {
+        // Navigation
+        nav_title: 'BuBo Beach',
+        nav_home: 'Accueil',
+        nav_experiences: 'Expériences',
+        nav_events: 'Événements',
+        nav_contact: 'Contact',
+        nav_reserve: 'Réserver',
+        
+        // Hero Section
+        hero_title: 'BuBo Beach Club',
+        hero_subtitle: 'Où le luxe rencontre la mer',
+        hero_description: 'Découvrez la combinaison parfaite de gastronomie exceptionnelle, de détente au bord de la piscine et d\'événements uniques au cœur de la Costa del Sol.',
+        hero_cta_primary: 'Réserver Table',
+        hero_cta_secondary: 'Découvrir Plus',
+        
+        // Features
+        feature_restaurant: 'Restaurant Gourmet',
+        feature_restaurant_desc: 'Cuisine méditerranéenne signature',
+        feature_pool: 'Piscine Exclusive',
+        feature_pool_desc: 'Détendez-vous avec vue sur mer',
+        feature_events: 'Événements Uniques',
+        feature_events_desc: 'Musique live et célébrations',
+        
+        // Experiences
+        experiences_title: 'Nos Expériences',
+        experiences_subtitle: 'Chaque moment au BuBo Beach Club est conçu pour créer des souvenirs inoubliables',
+        exp_restaurant_title: 'Restaurant',
+        exp_restaurant_desc: 'Savourez notre cuisine méditerranéenne signature avec des ingrédients frais et locaux, accompagnée des meilleures vues sur la mer.',
+        exp_pool_title: 'Piscine',
+        exp_pool_desc: 'Détendez-vous dans notre piscine exclusive avec service de cocktails premium et les meilleures vues panoramiques de la côte.',
+        exp_events_title: 'Événements Privés',
+        exp_events_desc: 'Organisez votre événement parfait avec notre équipe spécialisée. Mariages, célébrations d\'entreprise et fêtes exclusives.',
+        exp_reserve: 'Réserver Table',
+        
+        // Events
+        events_title: 'Événements à Venir',
+        events_subtitle: 'Vivez des expériences musicales uniques dans l\'atmosphère la plus exclusive de la côte',
+        event_jazz_title: 'Soirée Jazz',
+        event_jazz_date: 'Vendredis 20h00 - 00h00',
+        event_jazz_desc: 'Profitez des meilleurs artistes de jazz en direct tout en savourant nos cocktails signature sous les étoiles.',
+        event_rnb_title: 'Tribute R&B 2000s',
+        event_rnb_date: 'Samedis 21h00 - 02h00',
+        event_rnb_desc: 'Revivez les meilleurs hits R&B des années 2000 avec des performances live qui vous transporteront à l\'âge d\'or du genre.',
+        event_hiphop_title: 'Hip Hop Classics',
+        event_hiphop_date: 'Dimanches 19h00 - 23h00',
+        event_hiphop_desc: 'Les classiques du hip hop qui ont marqué une génération, interprétés par les meilleurs DJs et artistes de la scène locale.',
+        event_sunset_title: 'Sunset Lounge',
+        event_sunset_date: 'Quotidien 18h00 - 21h00',
+        event_sunset_desc: 'Musique chill-out et ambiance détendue pour profiter des couchers de soleil les plus spectaculaires de la Costa del Sol.',
+        event_reserve: 'Réserver',
+        
+        // Reservation
+        reservation_title: 'Réservez Votre Table',
+        reservation_subtitle: 'Sécurisez votre place dans l\'expérience la plus exclusive de la côte',
+        quick_reservation_title: 'Réservation Rapide',
+        quick_reservation_desc: 'Confirmez votre réservation via WhatsApp en moins de 2 minutes',
+        quick_experience_label: 'Sélectionnez votre expérience',
+        quick_restaurant: 'Restaurant',
+        quick_restaurant_desc: 'Cuisine méditerranéenne signature',
+        quick_pool: 'Piscine',
+        quick_pool_desc: 'Détente avec vue sur mer',
+        quick_event: 'Événement Privé',
+        quick_event_desc: 'Célébrations exclusives',
+        quick_reserve_whatsapp: 'Réserver via WhatsApp',
+        quick_reserve_note: 'Nous vous contacterons immédiatement pour confirmer votre réservation',
+        
+        // Contact
+        contact_title: 'Contact',
+        contact_subtitle: 'Nous sommes là pour réaliser votre expérience parfaite',
+        contact_info_title: 'Informations de Contact',
+        contact_address_title: 'Adresse',
+        contact_address: 'Plage des Rêves<br>Costa del Sol, Espagne',
+        contact_phone_title: 'Téléphone',
+        contact_hours_title: 'Horaires',
+        contact_hours: 'Lundi à Dimanche<br>12h00 - 00h00',
+        contact_actions_title: 'Contact Direct',
+        contact_whatsapp: 'WhatsApp',
+        contact_whatsapp_desc: 'Réponse immédiate',
+        contact_call: 'Appeler Maintenant',
+        contact_call_desc: 'Attention personnalisée',
+        contact_reserve: 'Réserver Table',
+        contact_reserve_desc: 'Processus rapide et facile',
+        
+        // Footer
+        footer_title: 'BuBo Beach Club',
+        footer_description: 'Où chaque moment devient un souvenir inoubliable. Expériences uniques au cœur de la Costa del Sol.',
+        footer_copyright: '© 2024 BuBo Beach Club. Tous droits réservés.'
+      },
+      de: {
+        // Navigation
+        nav_title: 'BuBo Beach',
+        nav_home: 'Startseite',
+        nav_experiences: 'Erlebnisse',
+        nav_events: 'Events',
+        nav_contact: 'Kontakt',
+        nav_reserve: 'Reservieren',
+        
+        // Hero Section
+        hero_title: 'BuBo Beach Club',
+        hero_subtitle: 'Wo Luxus auf das Meer trifft',
+        hero_description: 'Erleben Sie die perfekte Kombination aus außergewöhnlicher Gastronomie, Entspannung am Pool und einzigartigen Events im Herzen der Costa del Sol.',
+        hero_cta_primary: 'Tisch Reservieren',
+        hero_cta_secondary: 'Mehr Entdecken',
+        
+        // Features
+        feature_restaurant: 'Gourmet Restaurant',
+        feature_restaurant_desc: 'Mediterrane Signature-Küche',
+        feature_pool: 'Exklusiver Pool',
+        feature_pool_desc: 'Entspannen mit Meerblick',
+        feature_events: 'Einzigartige Events',
+        feature_events_desc: 'Live-Musik und Feiern',
+        
+        // Experiences
+        experiences_title: 'Unsere Erlebnisse',
+        experiences_subtitle: 'Jeder Moment im BuBo Beach Club ist darauf ausgelegt, unvergessliche Erinnerungen zu schaffen',
+        exp_restaurant_title: 'Restaurant',
+        exp_restaurant_desc: 'Genießen Sie unsere mediterrane Signature-Küche mit frischen, lokalen Zutaten, begleitet von den besten Meerblicken.',
+        exp_pool_title: 'Pool',
+        exp_pool_desc: 'Entspannen Sie in unserem exklusiven Pool mit Premium-Cocktail-Service und den besten Panoramablicken auf die Küste.',
+        exp_events_title: 'Private Events',
+        exp_events_desc: 'Organisieren Sie Ihr perfektes Event mit unserem spezialisierten Team. Hochzeiten, Firmenfeiern und exklusive Partys.',
+        exp_reserve: 'Tisch Reservieren',
+        
+        // Events
+        events_title: 'Kommende Events',
+        events_subtitle: 'Erleben Sie einzigartige musikalische Erfahrungen in der exklusivsten Atmosphäre der Küste',
+        event_jazz_title: 'Jazz Nacht',
+        event_jazz_date: 'Freitags 20:00 - 00:00',
+        event_jazz_desc: 'Genießen Sie die besten Live-Jazz-Künstler, während Sie unsere Signature-Cocktails unter den Sternen genießen.',
+        event_rnb_title: 'R&B 2000s Tribute',
+        event_rnb_date: 'Samstags 21:00 - 02:00',
+        event_rnb_desc: 'Erleben Sie die besten R&B-Hits der 2000er Jahre mit Live-Performances, die Sie in die goldene Ära des Genres versetzen.',
+        event_hiphop_title: 'Hip Hop Classics',
+        event_hiphop_date: 'Sonntags 19:00 - 23:00',
+        event_hiphop_desc: 'Die Hip-Hop-Klassiker, die eine Generation prägten, interpretiert von den besten DJs und Künstlern der lokalen Szene.',
+        event_sunset_title: 'Sunset Lounge',
+        event_sunset_date: 'Täglich 18:00 - 21:00',
+        event_sunset_desc: 'Chill-out-Musik und entspannte Atmosphäre, um die spektakulärsten Sonnenuntergänge der Costa del Sol zu genießen.',
+        event_reserve: 'Reservieren',
+        
+        // Reservation
+        reservation_title: 'Reservieren Sie Ihren Tisch',
+        reservation_subtitle: 'Sichern Sie sich Ihren Platz im exklusivsten Erlebnis der Küste',
+        quick_reservation_title: 'Schnelle Reservierung',
+        quick_reservation_desc: 'Bestätigen Sie Ihre Reservierung über WhatsApp in weniger als 2 Minuten',
+        quick_experience_label: 'Wählen Sie Ihr Erlebnis',
+        quick_restaurant: 'Restaurant',
+        quick_restaurant_desc: 'Mediterrane Signature-Küche',
+        quick_pool: 'Pool',
+        quick_pool_desc: 'Entspannung mit Meerblick',
+        quick_event: 'Private Veranstaltung',
+        quick_event_desc: 'Exklusive Feiern',
+        quick_reserve_whatsapp: 'Über WhatsApp Reservieren',
+        quick_reserve_note: 'Wir kontaktieren Sie sofort, um Ihre Reservierung zu bestätigen',
+        
+        // Contact
+        contact_title: 'Kontakt',
+        contact_subtitle: 'Wir sind hier, um Ihr perfektes Erlebnis wahr werden zu lassen',
+        contact_info_title: 'Kontaktinformationen',
+        contact_address_title: 'Adresse',
+        contact_address: 'Traumstrand<br>Costa del Sol, Spanien',
+        contact_phone_title: 'Telefon',
+        contact_hours_title: 'Öffnungszeiten',
+        contact_hours: 'Montag bis Sonntag<br>12:00 - 00:00',
+        contact_actions_title: 'Direkter Kontakt',
+        contact_whatsapp: 'WhatsApp',
+        contact_whatsapp_desc: 'Sofortige Antwort',
+        contact_call: 'Jetzt Anrufen',
+        contact_call_desc: 'Persönliche Betreuung',
+        contact_reserve: 'Tisch Reservieren',
+        contact_reserve_desc: 'Schneller und einfacher Prozess',
+        
+        // Footer
+        footer_title: 'BuBo Beach Club',
+        footer_description: 'Wo jeder Moment zu einer unvergesslichen Erinnerung wird. Einzigartige Erlebnisse im Herzen der Costa del Sol.',
+        footer_copyright: '© 2024 BuBo Beach Club. Alle Rechte vorbehalten.'
+      },
+      it: {
+        // Navigation
+        nav_title: 'BuBo Beach',
+        nav_home: 'Home',
+        nav_experiences: 'Esperienze',
+        nav_events: 'Eventi',
+        nav_contact: 'Contatto',
+        nav_reserve: 'Prenota',
+        
+        // Hero Section
+        hero_title: 'BuBo Beach Club',
+        hero_subtitle: 'Dove il lusso incontra il mare',
+        hero_description: 'Vivi la perfetta combinazione di gastronomia eccezionale, relax a bordo piscina ed eventi unici nel cuore della Costa del Sol.',
+        hero_cta_primary: 'Prenota Tavolo',
+        hero_cta_secondary: 'Scopri di Più',
+        
+        // Features
+        feature_restaurant: 'Ristorante Gourmet',
+        feature_restaurant_desc: 'Cucina mediterranea signature',
+        feature_pool: 'Piscina Esclusiva',
+        feature_pool_desc: 'Rilassati con vista mare',
+        feature_events: 'Eventi Unici',
+        feature_events_desc: 'Musica dal vivo e celebrazioni',
+        
+        // Experiences
+        experiences_title: 'Le Nostre Esperienze',
+        experiences_subtitle: 'Ogni momento al BuBo Beach Club è progettato per creare ricordi indimenticabili',
+        exp_restaurant_title: 'Ristorante',
+        exp_restaurant_desc: 'Goditi la nostra cucina mediterranea signature con ingredienti freschi e locali, accompagnata dalle migliori viste sul mare.',
+        exp_pool_title: 'Piscina',
+        exp_pool_desc: 'Rilassati nella nostra piscina esclusiva con servizio cocktail premium e le migliori viste panoramiche della costa.',
+        exp_events_title: 'Eventi Privati',
+        exp_events_desc: 'Organizza il tuo evento perfetto con il nostro team specializzato. Matrimoni, celebrazioni aziendali e feste esclusive.',
+        exp_reserve: 'Prenota Tavolo',
+        
+        // Events
+        events_title: 'Prossimi Eventi',
+        events_subtitle: 'Vivi esperienze musicali uniche nell\'atmosfera più esclusiva della costa',
+        event_jazz_title: 'Serata Jazz',
+        event_jazz_date: 'Venerdì 20:00 - 00:00',
+        event_jazz_desc: 'Goditi i migliori artisti jazz dal vivo mentre assapori i nostri cocktail signature sotto le stelle.',
+        event_rnb_title: 'Tributo R&B 2000s',
+        event_rnb_date: 'Sabati 21:00 - 02:00',
+        event_rnb_desc: 'Rivivi i migliori successi R&B degli anni 2000 con performance dal vivo che ti trasporteranno nell\'era d\'oro del genere.',
+        event_hiphop_title: 'Hip Hop Classics',
+        event_hiphop_date: 'Domeniche 19:00 - 23:00',
+        event_hiphop_desc: 'I classici dell\'hip hop che hanno segnato una generazione, interpretati dai migliori DJ e artisti della scena locale.',
+        event_sunset_title: 'Sunset Lounge',
+        event_sunset_date: 'Quotidiano 18:00 - 21:00',
+        event_sunset_desc: 'Musica chill-out e atmosfera rilassata per godersi i tramonti più spettacolari della Costa del Sol.',
+        event_reserve: 'Prenota',
+        
+        // Reservation
+        reservation_title: 'Prenota il Tuo Tavolo',
+        reservation_subtitle: 'Assicurati il tuo posto nell\'esperienza più esclusiva della costa',
+        quick_reservation_title: 'Prenotazione Rapida',
+        quick_reservation_desc: 'Conferma la tua prenotazione via WhatsApp in meno di 2 minuti',
+        quick_experience_label: 'Seleziona la tua esperienza',
+        quick_restaurant: 'Ristorante',
+        quick_restaurant_desc: 'Cucina mediterranea signature',
+        quick_pool: 'Piscina',
+        quick_pool_desc: 'Relax con vista mare',
+        quick_event: 'Evento Privato',
+        quick_event_desc: 'Celebrazioni esclusive',
+        quick_reserve_whatsapp: 'Prenota via WhatsApp',
+        quick_reserve_note: 'Ti contatteremo immediatamente per confermare la tua prenotazione',
+        
+        // Contact
+        contact_title: 'Contatto',
+        contact_subtitle: 'Siamo qui per realizzare la tua esperienza perfetta',
+        contact_info_title: 'Informazioni di Contatto',
+        contact_address_title: 'Indirizzo',
+        contact_address: 'Spiaggia dei Sogni<br>Costa del Sol, Spagna',
+        contact_phone_title: 'Telefono',
+        contact_hours_title: 'Orari',
+        contact_hours: 'Lunedì a Domenica<br>12:00 - 00:00',
+        contact_actions_title: 'Contatto Diretto',
+        contact_whatsapp: 'WhatsApp',
+        contact_whatsapp_desc: 'Risposta immediata',
+        contact_call: 'Chiama Ora',
+        contact_call_desc: 'Attenzione personalizzata',
+        contact_reserve: 'Prenota Tavolo',
+        contact_reserve_desc: 'Processo rapido e facile',
+        
+        // Footer
+        footer_title: 'BuBo Beach Club',
+        footer_description: 'Dove ogni momento diventa un ricordo indimenticabile. Esperienze uniche nel cuore della Costa del Sol.',
+        footer_copyright: '© 2024 BuBo Beach Club. Tutti i diritti riservati.'
+      }
+    };
+
+    let currentLanguage = localStorage.getItem('language') || 'es';
+
+    // Language functionality
+    const languageToggle = document.getElementById('languageToggle');
+    const languageMenu = document.getElementById('languageMenu');
+    const currentLangSpan = document.getElementById('currentLang');
+    const langOptions = document.querySelectorAll('.lang-option');
+
+    // Update current language display
+    function updateLanguageDisplay() {
+      currentLangSpan.textContent = currentLanguage.toUpperCase();
+    }
+
+    // Translate page content
+    function translatePage() {
+      const elements = document.querySelectorAll('[data-translate]');
+      elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[currentLanguage] && translations[currentLanguage][key]) {
+          element.innerHTML = translations[currentLanguage][key];
+        }
+      });
+    }
+
+    // Language menu toggle
+    languageToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      languageMenu.classList.toggle('hidden');
+    });
+
+    // Close language menu when clicking outside
+    document.addEventListener('click', () => {
+      languageMenu.classList.add('hidden');
+    });
+
+    // Language selection
+    langOptions.forEach(option => {
+      option.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentLanguage = option.getAttribute('data-lang');
+        localStorage.setItem('language', currentLanguage);
+        updateLanguageDisplay();
+        translatePage();
+        languageMenu.classList.add('hidden');
+      });
+    });
+
+    // Initialize language
+    updateLanguageDisplay();
+    translatePage();
+
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+    const body = document.body;
+
+    // Initialize theme
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      applyTheme(savedTheme);
+    }
+
+    // Apply theme
+    function applyTheme(theme) {
+      body.classList.remove('light-theme', 'dark-theme');
+      
+      if (theme === 'dark') {
+        body.classList.add('dark-theme');
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      } else {
+        body.classList.add('light-theme');
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      }
+      
+      localStorage.setItem('theme', theme);
+    }
+
+    // Theme toggle click handler
+    themeToggle.addEventListener('click', () => {
+      const isDark = body.classList.contains('dark-theme');
+      const newTheme = isDark ? 'light' : 'dark';
+      applyTheme(newTheme);
+    });
+
+    // Initialize theme on page load
+    initTheme();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for navigation links
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const navHeight = document.querySelector('nav').offsetHeight;
+        const targetPosition = section.offsetTop - navHeight;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+        
+        // Close mobile menu if open
+        mobileMenu.classList.add('hidden');
+      }
+    }
+
+    // Add click handlers to navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const sectionId = link.getAttribute('href').substring(1);
+        scrollToSection(sectionId);
+      });
+    });
+
+    // Scroll animations
+    function handleScrollAnimations() {
+      const elements = document.querySelectorAll('.scroll-animate');
+      const windowHeight = window.innerHeight;
+      
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        
+        if (elementTop < windowHeight * 0.8) {
+          element.classList.add('animate');
+        }
+      });
+    }
+
+    // Initial check and scroll listener
+    handleScrollAnimations();
+    window.addEventListener('scroll', handleScrollAnimations);
+
+    // Experience selection for quick reservation
+    const experienceBtns = document.querySelectorAll('.experience-btn');
+    const quickReserveBtn = document.getElementById('quickReserveBtn');
+    let selectedExperience = '';
+
+    experienceBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active state from all buttons
+        experienceBtns.forEach(b => {
+          b.classList.remove('border-blue-400', 'bg-blue-50');
+          b.classList.add('border-gray-200');
+        });
+        
+        // Add active state to clicked button
+        btn.classList.remove('border-gray-200');
+        btn.classList.add('border-blue-400', 'bg-blue-50');
+        
+        // Store selected experience
+        selectedExperience = btn.getAttribute('data-experience');
+        
+        // Enable reserve button
+        quickReserveBtn.disabled = false;
+        quickReserveBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      });
+    });
+
+    // Quick reservation WhatsApp handler
+    quickReserveBtn.addEventListener('click', () => {
+      if (!selectedExperience) return;
+      
+      const message = `Hola! Me gustaría hacer una reserva en BuBo Beach Club para: ${selectedExperience}. ¿Podrían ayudarme con la disponibilidad?`;
+      const whatsappUrl = `https://wa.me/34644075065?text=${encodeURIComponent(message)}`;
+      
+      window.open(whatsappUrl, '_blank');
+    });
+
+    // Intersection Observer for better performance
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all scroll-animate elements
+    document.querySelectorAll('.scroll-animate').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Add staggered animation delays
+    document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in').forEach((el, index) => {
+      el.style.animationDelay = `${index * 0.1}s`;
+    });
+
+    // Optimize scroll performance
+    let ticking = false;
+
+    function updateScrollAnimations() {
+      handleScrollAnimations();
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollAnimations);
+        ticking = true;
+      }
+    });
+
+    // Add loading state management
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
+
+    // Preload critical images
+    const criticalImages = [
+      'https://res.cloudinary.com/ddjl4shzl/image/upload/v1755559379/ChatGPT_Image_Aug_17_2025_12_26_50_AM_yah34b.png'
+    ];
+
+    criticalImages.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97154081e550eca1',t:'MTc1NTU2MDM4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
